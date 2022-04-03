@@ -1,140 +1,152 @@
 /* (A) TIMELINE CONTAINER */
 .alt-vtl {
-    /* (A1) RELATIVE POSITION REQUIRED TO PROPERLY POSITION THE TIMELINE */
-    position: relative;
-   
-    /* (A2) WIDTH RESTRICTION & CENTER ON PAGE */
- 
-    max-width: 851px;
+  /* (A1) RELATIVE POSITION REQUIRED TO PROPERLY POSITION THE TIMELINE */
+  position: relative;
 
-    margin: 0 auto;
-  }
-  
-  /* (B) DRAW TIMELINE USING ::BEFORE */
-  .alt-vtl::before {
-    /* (B1) VERTICAL LINE */
-    content: "";
-    box-shadow: rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(225 227 230) 0px 0px 20px, rgb(225 227 230) 0px 0px 30px, rgb(225 227 230) 0px 0px 40px, rgb(225 227 230) 0px 0px 55px, rgb(225 227 230) 0px 0px 75px;
-    width: 5px;
-    background-color: #ffff;
-   
-    /* (B2) POSITION IN THE MIDDLE */
-    position: absolute;
-    top: 0; bottom: 0; left: 50%;
-  }
-  
-  /* (C) EVENTS */
-  div.alt-event {
-    /* (C1) COSMETICS */
-    /* background-color: #fff; */
-    border-radius: 6px;
-   
-    /* (C2) DIMENSIONS */
-    padding: 20px 30px;
-    width: 45%;
-    margin-bottom: 10px;
-   
-    /* (C3) POSITION - DEFAULT LEFT SIDE */
-    position: relative;
-    left: 0;
-  }
-   
-  /* (C4) CHANGE EVENT POSITION TO RIGHT SIDE */
-  div.right { left: 55%; }
-  
-  /* (D) COSMETICS FOR EVENT DATE & TEXT */
-  p.date {
-    font-size: 29px;
-    font-weight: 700;
-    color: #fff;
-  }
-  p.txt {
-    margin: 10px 0 0 0;
-    color: #fff;
-  }
-  
-  /* (E) EVENT "SPEECH BUBBLE CALLOUT" */
-  /* (E1) SHARED */
-  div.alt-event::before, div.alt-event.right::before {
-    content: "";
-    border: 10px solid transparent;
-    position: absolute;
-  }
-   
-  /* (E2) FOR EVENTS ON THE LEFT */
-  div.alt-event::before {
-    /* (E2-1) "MAGIC TRIANGLE" */
-    /* border-left-color: #fff; */
-    border-right: 0;
-   
-    /* (E2-2) POSITION TRIANGLE ON THE RIGHT */
-    /* left: 100%; top: 20%; */
-  }
-   
-  /* (E3) FOR EVENTS ON THE RIGHT */
-  div.alt-event.right::before {
-    /* (E3-1) "MAGIC TRIANGLE" */
-    /* border-right-color: #fff; */
-    border-left: 0;
-   
-    /* (E3-2) POSITION TRIANGLE ON THE LEFT */
-    /* left: auto; right: 100%; top: 20%; */
-  }
-   
-  /* (F) EVENT CIRCLE ON TIMELINE */
-  /* (F1) SHARED */
-  div.alt-event::after, div.alt-event.right::after {
-    content: "";
-    box-shadow: rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(225 227 230) 0px 0px 20px, rgb(225 227 230) 0px 0px 30px, rgb(225 227 230) 0px 0px 40px, rgb(225 227 230) 0px 0px 55px, rgb(225 227 230) 0px 0px 75px;
-    border: 4px solid #fff;
-    width: 23px;
-    height: 23px;
-    border-radius: 50%;
-    background: #fff;
-    position: absolute;
-  }
-   
-  /* (F2) POSITION TO THE LEFT */
-  div.alt-event::after {
-    top: 14%;
-    left: 109%;
- }
-   
-  /* (F3) POSITION TO THE RIGHT */
-  div.alt-event.right::after {     top: 12%;
-    left: auto;
-    right: 107%; }
-  
-  /* (X) DOES NOT MATTER */
-  /* PAGE & BODY */
-  * {
-    font-family: arial, sans-serif;
-    box-sizing: border-box;
-  }
-  
-  
-  /* WIDGET */
-  .widget-wrap {
-    /* min-width: 500px; */
-    background-image: url('../images/bg1.jpg');
-  }
-  
-  /* SVG */
-  #grid {
-    width: 100%; height:100px;
-   
-  }
-  
-  /* FOOTER */
-  #code-boxx {
-    font-weight: 600;
-    margin-top: 50px;
-  }
-  #code-boxx a {
-    display: inline-block;
-    padding: 5px;
-    text-decoration: none;
-    background: #b90a0a;
-    color: #fff;
-  }
-  #code-boxx , h1 { text-align: center; }
+  /* (A2) WIDTH RESTRICTION & CENTER ON PAGE */
+
+  max-width: 851px;
+
+  margin: 0 auto;
+}
+
+/* (B) DRAW TIMELINE USING ::BEFORE */
+.alt-vtl::before {
+  /* (B1) VERTICAL LINE */
+  content: "";
+  /* box-shadow: rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(225 227 230) 0px 0px 20px, rgb(225 227 230) 0px 0px 30px, rgb(225 227 230) 0px 0px 40px, rgb(225 227 230) 0px 0px 55px, rgb(225 227 230) 0px 0px 75px; */
+  width: 5px;
+  background-color: rgb(5, 5, 5);
+
+  /* (B2) POSITION IN THE MIDDLE */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+
+/* (C) EVENTS */
+div.alt-event {
+  /* (C1) COSMETICS */
+  /* background-color: #fff; */
+  border-radius: 6px;
+
+  /* (C2) DIMENSIONS */
+  padding: 20px 30px;
+  width: 45%;
+  margin-bottom: 10px;
+
+  /* (C3) POSITION - DEFAULT LEFT SIDE */
+  position: relative;
+  left: 0;
+}
+
+/* (C4) CHANGE EVENT POSITION TO RIGHT SIDE */
+div.right {
+  left: 55%;
+}
+
+/* (D) COSMETICS FOR EVENT DATE & TEXT */
+p.date {
+  font-size: 29px;
+  font-weight: 700;
+  color: rgb(5, 5, 5);
+}
+p.txt {
+  margin: 10px 0 0 0;
+  color: rgb(5, 5, 5);
+}
+
+/* (E) EVENT "SPEECH BUBBLE CALLOUT" */
+/* (E1) SHARED */
+div.alt-event::before,
+div.alt-event.right::before {
+  content: "";
+  border: 10px solid transparent;
+  position: absolute;
+}
+
+/* (E2) FOR EVENTS ON THE LEFT */
+div.alt-event::before {
+  /* (E2-1) "MAGIC TRIANGLE" */
+  /* border-left-color: #fff; */
+  border-right: 0;
+
+  /* (E2-2) POSITION TRIANGLE ON THE RIGHT */
+  /* left: 100%; top: 20%; */
+}
+
+/* (E3) FOR EVENTS ON THE RIGHT */
+div.alt-event.right::before {
+  /* (E3-1) "MAGIC TRIANGLE" */
+  /* border-right-color: #fff; */
+  border-left: 0;
+
+  /* (E3-2) POSITION TRIANGLE ON THE LEFT */
+  /* left: auto; right: 100%; top: 20%; */
+}
+
+/* (F) EVENT CIRCLE ON TIMELINE */
+/* (F1) SHARED */
+div.alt-event::after,
+div.alt-event.right::after {
+  content: "";
+  box-shadow: rgb(248, 171, 3) 0px 0px 5px, rgb(248, 171, 3) 0px 0px 10px,
+    rgb(158, 109, 4) 0px 0px 20px, rgb(158, 109, 4) 0px 0px 30px,
+    rgb(158, 109, 4) 0px 0px 40px, rgb(158, 109, 4) 0px 0px 55px,
+    rgb(158, 109, 4) 0px 0px 75px;
+  border: 4px solid rgb(5 5 5);
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: rgb(5 5 5);
+  position: absolute;
+}
+
+/* (F2) POSITION TO THE LEFT */
+div.alt-event::after {
+  top: 14%;
+  left: 109%;
+}
+
+/* (F3) POSITION TO THE RIGHT */
+div.alt-event.right::after {
+  top: 12%;
+  left: auto;
+  right: 107%;
+}
+
+/* (X) DOES NOT MATTER */
+/* PAGE & BODY */
+* {
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* WIDGET */
+.widget-wrap {
+  /* min-width: 500px; */
+  background-image: url("../images/bg_roadmap.png");
+}
+/* SVG */
+#grid {
+  width: 100%;
+  height: 100px;
+}
+
+/* FOOTER */
+#code-boxx {
+  font-weight: 600;
+  margin-top: 50px;
+}
+#code-boxx a {
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none;
+  background: #b90a0a;
+  color: #fff;
+}
+#code-boxx,
+h1 {
+  text-align: center;
+}

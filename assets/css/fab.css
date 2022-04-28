@@ -63,7 +63,7 @@ body {
   margin: 35px 25px;
 }
 .floating-container:hover {
-  height: 420px;
+  height: 460px;
 }
 
 .floating-container:hover .floating-button {
